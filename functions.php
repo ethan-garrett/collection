@@ -24,6 +24,11 @@ function fullRanking($db): array
     return $result;
 }
 
+
+/**Displays the data in the array within HTML tags
+ * @param $resultArray - array - contains results of databae query
+ * @return void - no return as it would end loop
+ */
 function displayArray($resultArray)
 {
     $i = 1;
