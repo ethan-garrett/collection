@@ -1,4 +1,7 @@
 <?php
 require ('functions.php');
 $db = dbLink();
-fullRanking($db);
+$result = fullRanking($db);
+echo '<pre>';
+var_dump($result);
+echo '<pre>';
