@@ -1,3 +1,4 @@
 <?php
 require ('functions.php');
-mainQuery();
+$db = dbLink();
+fullRanking($db);
