@@ -1,7 +1,17 @@
 <?php
 require ('functions.php');
 $db = dbLink();
-$result = fullRanking($db);
-echo '<pre>';
-var_dump($result);
-echo '<pre>';
+$resultArray = fullRanking($db);
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="indexstyling.css" type="text/css" rel="stylesheet"/>
+    <link href="normalize.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<?php displayArray($resultArray); ?>
+</body>
+</html>

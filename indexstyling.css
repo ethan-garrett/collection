@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+.entryContainer{
+    display: flex;
+    border:2px solid black;
+    max-width: 60%;
+    margin:10px auto;
+    align-items: center;
+}
+
+.entryContainer div{
+    margin: 5px;
+}
+
+.flag img{
+    max-width: 200px;
+}
