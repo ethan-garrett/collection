@@ -42,7 +42,7 @@ function displayArray($resultArray)
                         <div class='id'> <p>" . $i . "</p> </div>
                         <div class='flag'> <img src='images/" . $country . ".png' alt=''> </div>
                         <div class='player'> <p>" . $name ."</p> </div> <div class='rating'> <p>" . $elo . "</p> </div>
-                        </div>";
+                    </div>";
         $i++;
         echo $output;
     }
