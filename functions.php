@@ -29,38 +29,40 @@ function fullRanking($db): array
  * @param $resultArray - array - contains results of database query
  * @return void - no return as it would end loop
  */
-function displayArray($resultArray)
+function displayArray(array $resultArray): string
 {
+    if (!count($resultArray))
+    {
+    return 'ERROR - No data found';
+    }
     $i = 1;
     $output = '';
     foreach ($resultArray as $result)
     {
-        $name = $result['player'];
-        $elo = $result['rating'];
-        $country = $result['nationality'];
-        if ($country == 'CRO'
-            ||$country == 'CHN'
-            ||$country == 'DEN'
-            ||$country == 'ECU'
-            ||$country == 'GUM'
-            ||$country == 'HUN'
-            ||$country == 'IND'
-            ||$country == 'LUX'
-            ||$country == 'MAC'
-            ||$country == 'MDA'
-            ||$country == 'MLT'
-            ||$country == 'PSE'
-            ||$country == 'ROC'
-            ||$country == 'URY')
+
+        if ($result['nationality'] == 'CRO'
+            ||$result['nationality'] == 'CHN'
+            ||$result['nationality'] == 'DEN'
+            ||$result['nationality'] == 'ECU'
+            ||$result['nationality'] == 'GUM'
+            ||$result['nationality'] == 'HUN'
+            ||$result['nationality'] == 'IND'
+            ||$result['nationality'] == 'LUX'
+            ||$result['nationality'] == 'MAC'
+            ||$result['nationality'] == 'MDA'
+            ||$result['nationality'] == 'MLT'
+            ||$result['nationality'] == 'PSE'
+            ||$result['nationality'] == 'ROC'
+            ||$result['nationality'] == 'URY')
         {
-            $country = 'XXX';
+            $result['nationality'] = 'XXX';
         }
 
         $output .=  "<div class='entryContainer'> 
                         <div class='id'> <p>#" . $i . "</p> </div>
-                        <div class='flag'> <img src='images/" . $country . ".png' alt=''> </div>
-                        <div class='player'> <p>" . $name ."</p> </div> 
-                        <div class='rating'> <p>" . $elo . "</p> </div>
+                        <div class='flag'> <img src='images/" . $result['nationality'] . ".png' alt=''> </div>
+                        <div class='player'> <p>" . $result['player'] ."</p> </div> 
+                        <div class='rating'> <p>" . $result['rating'] . "</p> </div>
                     </div>";
         $i++;
 
