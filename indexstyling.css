@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: #FAEBD7FF;
     font-size: 2rem;
     font-family: pixel;
 }
@@ -27,14 +27,14 @@ body {
     align-content: space-between;
 }
 
-.entryContainer div{
+.entryContainer div {
     margin: 10px;
 }
 
-.entryContainer .rating{
+.entryContainer .rating {
     margin-left: auto;
 }
 
-.flag img{
+.flag img {
     max-width: 200px;
 }

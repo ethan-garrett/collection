@@ -6,7 +6,7 @@ require '../functions.php';
 
 class functionsTest extends TestCase
 {
-    public function testSuccessDisplayArray()
+    public function testSuccessDisplayArray(): void
     {
         $expected = "<div class='entryContainer'> 
                         <div class='id'> <p>#" . "1" . "</p> </div>
@@ -18,7 +18,7 @@ class functionsTest extends TestCase
         $case = displayArray($inputArray);
         $this->assertEquals($expected, $case);
     }
-    public function testFailureDisplayArray()
+    public function testFailureDisplayArray(): void
     {
         $expected = 'ERROR - No data found';
         $inputArray = [];
