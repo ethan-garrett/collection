@@ -37,6 +37,10 @@ function displayArray($resultArray)
         $name = $result['player'];
         $elo = $result['rating'];
         $country = $result['nationality'];
+        if ($country == 'CRO' || $country == 'CHN' ||$country == 'DEN' ||$country == 'ECU' ||$country == 'GUM' ||$country == 'HUN' ||$country == 'IND' ||$country == 'LUX' ||$country == 'MAC' ||$country == 'MDA' ||$country == 'MLT' ||$country == 'PSE' ||$country == 'ROC' ||$country == 'URY')
+        {
+            $country = 'XXX';
+        }
 
         $output =  "<div class='entryContainer'> 
                         <div class='id'> <p>" . $i . "</p> </div>
