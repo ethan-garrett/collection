@@ -32,6 +32,7 @@ function fullRanking($db): array
 function displayArray($resultArray)
 {
     $i = 1;
+    $output = '';
     foreach ($resultArray as $result)
     {
         $name = $result['player'];
@@ -55,12 +56,14 @@ function displayArray($resultArray)
             $country = 'XXX';
         }
 
-        $output =  "<div class='entryContainer'> 
-                        <div class='id'> <p>" . $i . "</p> </div>
+        $output .=  "<div class='entryContainer'> 
+                        <div class='id'> <p>#" . $i . "</p> </div>
                         <div class='flag'> <img src='images/" . $country . ".png' alt=''> </div>
-                        <div class='player'> <p>" . $name ."</p> </div> <div class='rating'> <p>" . $elo . "</p> </div>
+                        <div class='player'> <p>" . $name ."</p> </div> 
+                        <div class='rating'> <p>" . $elo . "</p> </div>
                     </div>";
         $i++;
-        echo $output;
+
     }
+    return $output;
 }

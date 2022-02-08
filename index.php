@@ -12,6 +12,6 @@ $resultArray = fullRanking($db);
     <link href="normalize.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<?php displayArray($resultArray); ?>
+<?php echo displayArray($resultArray); ?>
 </body>
 </html>

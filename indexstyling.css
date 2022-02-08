@@ -7,16 +7,32 @@ html {
     font-size: 62.5%;
 }
 
-.entryContainer{
+@font-face {
+    font-family: pixel;
+    src:url(ARCADECLASSIC.TTF);
+}
+
+body {
+    background-color: antiquewhite;
+    font-size: 2rem;
+    font-family: pixel;
+}
+
+.entryContainer {
     display: flex;
-    border:2px solid #225784;
-    max-width: 60%;
-    margin:10px auto;
+    border: 2px solid #225784;
+    max-width: 70%;
+    margin: 10px auto;
     align-items: center;
+    align-content: space-between;
 }
 
 .entryContainer div{
-    margin: 5px;
+    margin: 10px;
+}
+
+.entryContainer .rating{
+    margin-left: auto;
 }
 
 .flag img{
