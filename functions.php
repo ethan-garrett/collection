@@ -25,8 +25,8 @@ function fullRanking($db): array
 }
 
 
-/**Displays the data in the array within HTML tags
- * @param $resultArray - array - contains results of databae query
+/**Displays the data in the array within HTML tags, also checks if I have the flag file in an if statement which checks nationality data for flags I don't have images for
+ * @param $resultArray - array - contains results of database query
  * @return void - no return as it would end loop
  */
 function displayArray($resultArray)
