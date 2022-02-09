@@ -15,6 +15,14 @@ $resultArray = fullRanking($db);
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
-    <?php echo displayArray($resultArray); ?>
+    <header>
+        <p class="title">CLASSIC</p>
+        <p class="title">TETRIS</p>
+        <p class="title">ELO</p>
+        <p class="title">RANKINGS</p>
+    </header>
+    <section class="entrySection">
+        <?php echo displayArray($resultArray); ?>
+    </section>
 </body>
 </html>

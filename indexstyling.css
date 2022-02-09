@@ -13,14 +13,80 @@ html {
 }
 
 body {
-    background-color: #FAEBD7FF;
+    background-color: #122c34;
     font-size: 2rem;
     font-family: pixel;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: 100px;
+    background-color: #2a4494;
+    border-style: dashed;
+    border-color: #FFFFFFFF;
+    border-width: 5px;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+.title {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 7rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .title {
+        font-size: 6rem;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .title {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .title {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 2rem;
+    }
+}
+
+.entrySection {
+    background-color: #224870;
+    width: 80%;
+    margin: 0 auto;
+    border-style: dashed;
+    border-color: #FFFFFFFF;
+    border-width: 5px;
+    border-top-style: none;
+    border-bottom-style: none;
 }
 
 .entryContainer {
     display: flex;
-    border: 2px solid #225784;
+    flex-wrap: wrap;
+    background-color: #2a4494;
+    border: 2px solid #4ea5d9;
     max-width: 70%;
     margin: 10px auto;
     align-items: center;
