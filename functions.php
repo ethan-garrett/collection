@@ -2,9 +2,10 @@
 
 
 /**links to the database
+ *
  * @return PDO returns database link
  */
-function dbLink()
+function dbLink(): PDO
 {
     $db = new PDO('mysql:host=db; dbname=ethan-collection', 'root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -12,10 +13,12 @@ function dbLink()
 }
 
 /**Queries teh database and returns all entries ordered by rating
+ *
  * @param $db - database link
+ *
  * @return array - returns results of query as an array
  */
-function fullRanking($db): array
+function fullRanking(PDO $db): array
 {
     $mainQuery = $db->prepare("SELECT `player`, `rating` , `nationality` FROM `tetrisrankings` ORDER BY `rating` DESC;");
     $mainQuery->execute();
@@ -25,8 +28,12 @@ function fullRanking($db): array
 }
 
 
-/**Displays the data in the array within HTML tags, also checks if I have the flag file in an if statement which checks nationality data for flags I don't have images for
+/**Displays the data in the array within HTML tags,
+ * also checks if I have the flag file in an if statement which checks nationality data for flags I don't have images for
+ * if i don't have the images it sets the nationality/image to XXX, the standard for no designated country
+ *
  * @param $resultArray - array - contains results of database query
+ * 
  * @return void - no return as it would end loop
  */
 function displayArray(array $resultArray): string
