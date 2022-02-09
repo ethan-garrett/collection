@@ -1,7 +1,20 @@
 <?php
 require ('functions.php');
 $db = dbLink();
-$result = fullRanking($db);
-echo '<pre>';
-var_dump($result);
-echo '<pre>';
+$resultArray = fullRanking($db);
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classic Tetris Elo Rankings</title>
+    <link href="indexstyling.css" type="text/css" rel="stylesheet"/>
+    <link href="normalize.css" type="text/css" rel="stylesheet"/>
+    <link rel="icon" href="favicon.png">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <?php echo displayArray($resultArray); ?>
+</body>
+</html>
