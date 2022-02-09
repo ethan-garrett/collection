@@ -1,16 +1,16 @@
 <?php
-require ('functions.php');
+require_once ('functions.php');
 $db = dbLink();
 $resultArray = fullRanking($db);
-
+$result = displayArray($resultArray);
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Classic Tetris Elo Rankings</title>
-    <link href="indexstyling.css" type="text/css" rel="stylesheet"/>
     <link href="normalize.css" type="text/css" rel="stylesheet"/>
+    <link href="indexstyling.css" type="text/css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
@@ -21,7 +21,7 @@ $resultArray = fullRanking($db);
         <p class="title">RANKINGS</p>
     </header>
     <section class="entrySection">
-        <?php echo displayArray($resultArray); ?>
+        <?php echo $result; ?>
     </section>
 </body>
 </html>

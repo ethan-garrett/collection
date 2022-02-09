@@ -12,7 +12,7 @@ function dbLink(): PDO
     return $db;
 }
 
-/**Queries teh database and returns all entries ordered by rating
+/**Queries the database and returns all entries ordered by rating
  *
  * @param $db - database link
  *
