@@ -11,7 +11,7 @@ $resultArray = fullRanking($db);
     <title>Classic Tetris Elo Rankings</title>
     <link href="indexstyling.css" type="text/css" rel="stylesheet"/>
     <link href="normalize.css" type="text/css" rel="stylesheet"/>
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" type="image/png" size="32x32" href="favicon.png">
     <meta name="viewport" content="width=device-width">
 </head>
 <body>

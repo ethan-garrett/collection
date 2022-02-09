@@ -14,7 +14,6 @@ html {
 
 body {
     background-color: #122c34;
-    font-size: 2rem;
     font-family: pixel;
     color: #ffffff;
 }
@@ -37,6 +36,48 @@ header {
     display: flex;
     justify-content: center;
     font-size: 7rem;
+}
+
+.entrySection {
+    background-color: #224870;
+    font-size: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    border-style: dashed;
+    border-color: #FFFFFFFF;
+    border-width: 5px;
+    border-top-style: none;
+    border-bottom-style: none;
+    padding: 2px;
+}
+
+.entryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #2a4494;
+    border: 5px dashed #4ea5d9;
+    border-radius: 5px;
+    max-width: 70%;
+    margin: 10px auto;
+    align-items: center;
+    align-content: space-between;
+}
+
+.entryContainer:first-child {
+    border-color: #efb524;
+    box-shadow: 0 4px 4px 0 #efb524, 0 3px 10px 0 #efb524;
+}
+
+.entryContainer div {
+    margin: 10px;
+}
+
+.entryContainer .rating {
+    margin-left: auto;
+}
+
+.flag img {
+    max-width: 200px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -69,44 +110,13 @@ header {
         flex-wrap: wrap;
         font-size: 2rem;
     }
-}
-
-.entrySection {
-    background-color: #224870;
-    width: 80%;
-    margin: 0 auto;
-    border-style: dashed;
-    border-color: #FFFFFFFF;
-    border-width: 5px;
-    border-top-style: none;
-    border-bottom-style: none;
-}
-
-.entryContainer {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #2a4494;
-    border: 5px dashed #4ea5d9;
-    border-radius: 5px;
-    max-width: 70%;
-    margin: 10px auto;
-    align-items: center;
-    align-content: space-between;
-}
-
-.entryContainer:first-child {
-    border-color: #efb524;
-    box-shadow: 0 4px 4px 0 #efb524, 0 3px 10px 0 #efb524;
-}
-
-.entryContainer div {
-    margin: 10px;
-}
-
-.entryContainer .rating {
-    margin-left: auto;
-}
-
-.flag img {
-    max-width: 200px;
+    .title {
+        margin: 5px;
+    }
+    .entrySection {
+        font-size: 1.5rem;
+    }
+    .player {
+        min-width: 50px;
+    }
 }
