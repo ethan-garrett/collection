@@ -86,11 +86,17 @@ header {
     display: flex;
     flex-wrap: wrap;
     background-color: #2a4494;
-    border: 2px solid #4ea5d9;
+    border: 5px dashed #4ea5d9;
+    border-radius: 5px;
     max-width: 70%;
     margin: 10px auto;
     align-items: center;
     align-content: space-between;
+}
+
+.entryContainer:first-child {
+    border-color: #efb524;
+    box-shadow: 0 4px 4px 0 #efb524, 0 3px 10px 0 #efb524;
 }
 
 .entryContainer div {
