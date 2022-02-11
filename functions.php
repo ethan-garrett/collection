@@ -27,6 +27,12 @@ function fullRanking(PDO $db): array
     return $result;
 }
 
+
+/**
+ * @param PDO $db
+ * @param string $country
+ * @return array
+ */
 function countryRanking(PDO $db, string $country): array
 {
     $mainQuery = $db->prepare("SELECT `player`, `rating` , `nationality` FROM `tetrisrankings` WHERE `nationality` = '$country' ORDER BY `rating` DESC;");

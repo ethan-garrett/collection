@@ -88,7 +88,7 @@ $result = displayArray($resultArray);
                 <option value="XXX">No Country</option>
                 <input type="submit">
             </select>
-        </form>>
+        </form>
     </section>
     <section class="entrySection">
         <?php echo $result; ?>

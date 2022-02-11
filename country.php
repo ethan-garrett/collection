@@ -89,7 +89,7 @@ $countryDisplay = displayArray($countryResult);
             <option value="XXX">No Country</option>
             <input type="submit">
         </select>
-    </form>>
+    </form>
 </section>
 <section class="entrySection">
     <?php echo $countryDisplay; ?>
