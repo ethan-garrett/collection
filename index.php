@@ -15,10 +15,13 @@ $result = displayArray($resultArray);
 </head>
 <body>
     <header>
-        <p class="title">CLASSIC</p>
-        <p class="title">TETRIS</p>
-        <p class="title">ELO</p>
-        <p class="title">RANKINGS</p>
+        <a href="index.php">
+
+            <p class="title">CLASSIC</p>
+            <p class="title">TETRIS</p>
+            <p class="title">ELO</p>
+            <p class="title">RANKINGS</p>
+        </a>
     </header>
     <section class="countryFormContainer">
         <form action="country.php" method = "get">

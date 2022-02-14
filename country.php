@@ -15,11 +15,12 @@ $countryDisplay = displayArray($countryResult);
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
-<header>
+<header> <a href="index.php">
     <p class="title">CLASSIC</p>
     <p class="title">TETRIS</p>
     <p class="title">ELO</p>
     <p class="title">RANKINGS</p>
+    </a>
 </header>
 <section class="countryFormContainer">
     <form action="country.php" method = "get">

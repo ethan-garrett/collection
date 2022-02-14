@@ -18,7 +18,7 @@ body {
     color: #ffffff;
 }
 
-header {
+a{
     display: flex;
     justify-content: center;
     max-width: 100%;
@@ -29,6 +29,16 @@ header {
     border-width: 5px;
     border-left-style: none;
     border-right-style: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
 }
 
 .title {
