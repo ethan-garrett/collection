@@ -23,6 +23,10 @@ $result = displayArray($resultArray);
             <p class="title">RANKINGS</p>
         </a>
     </header>
+    <div class="infoDiv">
+        <p>Click the title to head to the main rankings</p>
+        <p>Note: This website is a WIP and may have inaccurate data</p>
+    </div>
     <section class="countryFormContainer">
         <form action="country.php" method = "get">
             <select id="country" name="country">
