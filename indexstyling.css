@@ -92,6 +92,16 @@ a:visited {
     box-shadow: 0 4px 4px 0 #efb524, 0 3px 10px 0 #efb524;
 }
 
+.entryContainer:nth-child(2) {
+    border-color: #C0C0C0;
+    box-shadow: 0 4px 4px 0 #C0C0C0, 0 3px 10px 0 #C0C0C0;
+}
+
+.entryContainer:nth-child(3) {
+    border-color: #CD7F32;
+    box-shadow: 0 4px 4px 0 #CD7F32, 0 3px 10px 0 #CD7F32;
+}
+
 .entryContainer div {
     margin: 10px;
 }
