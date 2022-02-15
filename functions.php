@@ -28,6 +28,20 @@ function fullRanking(PDO $db): array
 }
 
 
+/**
+ * @param PDO $db
+ * @param string $country
+ * @return array
+ */
+function countryRanking(PDO $db, string $country): array
+{
+    $mainQuery = $db->prepare("SELECT `player`, `rating` , `nationality` FROM `tetrisrankings` WHERE `nationality` = '$country' ORDER BY `rating` DESC;");
+    $mainQuery->execute();
+
+    $result = $mainQuery->fetchAll();
+    return $result;
+}
+
 /**Displays the data in the array within HTML tags,
  * also checks if I have the flag file in an if statement which checks nationality data for flags I don't have images for
  * if i don't have the images it sets the nationality/image to XXX, the standard for no designated country
