@@ -28,18 +28,25 @@ function fullRanking(PDO $db): array
 }
 
 
-/**
- * @param PDO $db
- * @param string $country
- * @return array
+/**takes input from country search form and grabs all DB entries with that country and orders them.
+ * Also runs a check on input to make sure it's 3 characters long to ensure no malicous scripts can be injected
+ *
+ * @param PDO $db - link to database
+ * @param string $country - three letter country code returned by form
+ * @return array - returns the result of the query as an array
  */
 function countryRanking(PDO $db, string $country): array
 {
-    $mainQuery = $db->prepare("SELECT `player`, `rating` , `nationality` FROM `tetrisrankings` WHERE `nationality` = '$country' ORDER BY `rating` DESC;");
-    $mainQuery->execute();
+    if (strlen($country) == 3) {
+        $mainQuery = $db->prepare("SELECT `player`, `rating` , `nationality` FROM `tetrisrankings` WHERE `nationality` = '$country' ORDER BY `rating` DESC;");
+        $mainQuery->execute();
 
-    $result = $mainQuery->fetchAll();
-    return $result;
+        $result = $mainQuery->fetchAll();
+        return $result;
+    }
+    else {
+        header('index.php');
+    }
 }
 
 /**Displays the data in the array within HTML tags,
