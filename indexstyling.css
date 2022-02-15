@@ -64,6 +64,7 @@ a:visited {
 
 .infoDiv p {
     margin: 10px;
+    width: 100%;
     word-spacing: 5px;
 }
 
@@ -157,10 +158,10 @@ a:visited {
 }
 
 @media only screen and (max-width: 470px) {
-    header {
+    header a {
         display: flex;
         flex-wrap: wrap;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .title {
         margin: 5px;
@@ -170,5 +171,11 @@ a:visited {
     }
     .player {
         min-width: 50px;
+    }
+    .infoDiv p {
+        font-size: 1.5rem;
+    }
+    .countryFormContainer {
+        font-size: 1.5rem;
     }
 }
