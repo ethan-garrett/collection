@@ -51,17 +51,12 @@ function countryRanking(PDO $db, string $country): array
 
 function searchRanking(PDO $db, string $searchInput): array
 {
-    //if (strlen($searchInput) == 3) {
-        $searchCleaned =  '%' . $searchInput . '%';
-        $mainQuery = $db->prepare("SELECT `player`, `rating` , `nationality` FROM `tetrisrankings` WHERE `player` LIKE '$searchCleaned' ORDER BY `rating` DESC;");
-        $mainQuery->execute();
+    $searchCleaned = '%' . $searchInput . '%';
+    $mainQuery = $db->prepare("SELECT `player`, `rating` , `nationality` FROM `tetrisrankings` WHERE `player` LIKE '$searchCleaned' ORDER BY `rating` DESC;");
+    $mainQuery->execute();
 
-        $result = $mainQuery->fetchAll();
-        return $result;
-//    }
-//    else {
-//        header('index.php');
-//    }
+    $result = $mainQuery->fetchAll();
+    return $result;
 }
 
 /**Displays the data in the array within HTML tags,

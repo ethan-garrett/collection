@@ -94,7 +94,7 @@ $searchDisplay = displayArray($searchResult);
 </section>
 <section class="formContainer">
     <form action="search.php" method = "get">
-        <input type="text" name="searchInput" placeholder="Search by Name"/>
+        <input type="text" name="searchInput" placeholder="Search by Name" maxlength="25" autocomplete="off"/>
         <input type="submit"/>
     </form>
 </section>
