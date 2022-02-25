@@ -27,7 +27,7 @@ $result = displayArray($resultArray);
         <p>Click the title to head to the main rankings</p>
         <p>Note: This website is a WIP and may have inaccurate data</p>
     </div>
-    <section class="countryFormContainer">
+    <section class="formContainer">
         <form action="country.php" method = "get">
             <select id="country" name="country">
                 <option value="ARG">Argentina</option>
@@ -95,6 +95,12 @@ $result = displayArray($resultArray);
                 <option value="XXX">No Country</option>
                 <input type="submit">
             </select>
+        </form>
+    </section>
+    <section class="formContainer">
+        <form action="search.php" method = "get">
+            <input type="text" name="searchInput" placeholder="Search by Name" maxlength="25" autocomplete="off"/>
+            <input type="submit"/>
         </form>
     </section>
     <section class="entrySection">
