@@ -1,9 +1,9 @@
 <?php
 require_once 'functions.php';
 $db = dbLink();
-$country = $_GET['country'];
-$countryResult = countryRanking($db, $country);
-$countryDisplay = displayArray($countryResult);
+$search = $_GET['searchInput'];
+$searchResult = searchRanking($db, $search);
+$searchDisplay = displayArray($searchResult);
 
 ?>
 <!DOCTYPE html>
@@ -16,10 +16,10 @@ $countryDisplay = displayArray($countryResult);
 </head>
 <body>
 <header> <a href="index.php">
-    <p class="title">CLASSIC</p>
-    <p class="title">TETRIS</p>
-    <p class="title">ELO</p>
-    <p class="title">RANKINGS</p>
+        <p class="title">CLASSIC</p>
+        <p class="title">TETRIS</p>
+        <p class="title">ELO</p>
+        <p class="title">RANKINGS</p>
     </a>
 </header>
 <section class="formContainer">
@@ -99,7 +99,7 @@ $countryDisplay = displayArray($countryResult);
     </form>
 </section>
 <section class="entrySection">
-    <?php echo $countryDisplay; ?>
+    <?php echo $searchDisplay; ?>
 </section>
 </body>
 </html>
